@@ -4,7 +4,7 @@ Install Terraform on your local machine.
 Create a directory for your Terraform project.
 Inside the directory, create a file named main.tf with the following code:
 
-provider "aws" {
+'''provider "aws" {
   region = "us-west-2"
 }
 
@@ -41,7 +41,7 @@ resource "aws_subnet" "example" {
 
 output "instance_public_ips" {
   value = aws_instance.example.*.public_ip
-}
+}'''
 
 
 Initialize your Terraform project by running the command terraform init
