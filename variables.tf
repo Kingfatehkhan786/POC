@@ -21,36 +21,11 @@ variable "igw_name" {
   default     = "poc-igw"
 }
 
-variable "sub1_cidr" {
-  type        = string
-  default     = "10.0.1.0/24"
-}
-
 variable "az" {
   type        = list(string)
   default     = ["us-east-2a", "us-east-2b"]
 }
 
-variable "sub1_name" {
-  type        = string
-  default     = "poc-subnet-1"
-}
-
-variable "sub2_cidr" {
-  type        = string
-  default     = "10.0.2.0/24"
-}
-
-
-variable "sub2_name" {
-  type        = string
-  default     = "poc-subnet-2"
-}
-
-variable "sg_name" {
-  type        = string
-  default     = "poc-sg"
-}
 
 variable "ingress_protocol_1" {
   type        = string
@@ -93,15 +68,13 @@ variable "ingress_cidr2" {
 }
 
 variable "instance_type" {
-  description = "The EC2 instance type"
   type        = string
   default     = "t3a.medium"
 }
 
 variable "instance_key" {
-  description = "The EC2 instance type"
   type        = string
-  default     = "terraform.ppk"
+  default     = "terraform-key"
 }
 
 variable "ami_id" {
@@ -114,4 +87,3 @@ variable "instance_name" {
   type        = string
   default     = "poc-tf-instance-"
 }
-
